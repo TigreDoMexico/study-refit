@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: study-refit
+  annotations:
+    github.com/project-slug: TigreDoMexico/study-refit
+spec:
+  type: other
+  lifecycle: unknown
+  owner: TigreDoMexico
