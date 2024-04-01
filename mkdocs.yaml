@@ -1,0 +1,6 @@
+site_name: refit-csharp-study
+site_description: Study of Csharp and Refit
+plugins:
+  - techdocs-core
+nav:
+  - Getting Started: index.md

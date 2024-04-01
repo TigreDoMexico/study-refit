@@ -9,6 +9,7 @@ metadata:
     - httpclient
   annotations:
     github.com/project-slug: TigreDoMexico/study-refit
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: api
   lifecycle: study
