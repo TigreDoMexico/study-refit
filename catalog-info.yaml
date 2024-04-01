@@ -2,9 +2,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: study-refit
+  description: Study case for Refit and CSharp API
+  tags:
+    - csharp
+    - refit
+    - httpclient
   annotations:
     github.com/project-slug: TigreDoMexico/study-refit
 spec:
-  type: other
-  lifecycle: unknown
+  type: openapi
+  lifecycle: development
   owner: TigreDoMexico

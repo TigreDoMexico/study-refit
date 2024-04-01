@@ -1,5 +1,5 @@
 using ExampleCode.Application.Dto;
-using ExampleCode.Core.Pokemon.HttpClient;
+using ExampleCode.Core.Pokemon.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExampleCode.Application.Controllers;
@@ -9,15 +9,15 @@ namespace ExampleCode.Application.Controllers;
 public class PokemonController : ControllerBase
 {
     private readonly ILogger<PokemonController> _logger;
-    private readonly IPokeApi _pokeApi;
+    private readonly IPokemonService _pokemonService;
 
-    public PokemonController(IPokeApi pokeApi, ILogger<PokemonController> logger)
-        => (_pokeApi, _logger) = (pokeApi, logger);
+    public PokemonController(IPokemonService pokemonService, ILogger<PokemonController> logger)
+        => (_pokemonService, _logger) = (pokemonService, logger);
 
     [HttpGet("{id}")]
     public async Task<PokemonDto> Get(int id)
     {
-        var pokemonResponse = await _pokeApi.GetPokemon(id);
+        var pokemonResponse = await _pokemonService.GetPokemonAsync(id);
         return new(pokemonResponse.Id.ToString(), pokemonResponse.Name);
     }
 }

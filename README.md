@@ -1,4 +1,4 @@
-# study-refit
+# API with Refit
 
-## Conteúdo
-Exemplo de estudo do Refit utilizando a API PokeAPI
+## Content
+Here we have an example of API using Refit as HttpClient, to connect an External API (ie: pokeApi) to the solution
