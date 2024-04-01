@@ -10,6 +10,7 @@ metadata:
   annotations:
     github.com/project-slug: TigreDoMexico/study-refit
 spec:
-  type: openapi
-  lifecycle: development
-  owner: user:David Tigre
+  type: api
+  lifecycle: study
+  system: study-projects
+  owner: user:TigreDoMexico
